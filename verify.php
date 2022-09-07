@@ -9,8 +9,15 @@
 <body>
     <H1 style="text-align: center ;">WAKER WEBBROAD</H1>
     <hr>
-    <center>เข้าสู่ระบบด้วย<center><br>
-    Login = <?php echo $_POST["n"];?><br>
-    Password = <?php echo $_POST["pa"];?>
-</body>
+    <?php
+        $Log = $_POST["n"];
+        $Pass = $_POST["pa"];
+        if($Log == "admin" && $Pass == "ad1234")
+            echo "<center>ยินดีต้อนรับคุณ ADMIN</center>";
+        elseif($Log == "member" && $Pass == "mem1234")
+            echo "<center>ยินดีต้อนรับคุณ MEMBER</center>";
+        else
+            echo "<center>ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง</center>";
+    ?>
+    <center><a href="FirstPage.php">กลับไปหน้าหลัก</a></center>
 </html>
