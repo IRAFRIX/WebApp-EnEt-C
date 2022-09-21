@@ -23,6 +23,7 @@
     </select>
     <a style="float: right ;" href="Login.php">เข้าสู่ระบบ</a>
     <br>
+    <a href="newpost.php">สร้างกระทู้ใหม่</a>
     <ul>
         <?php
             for($i=1;$i<=10;$i++){
@@ -50,6 +51,7 @@
         <a href="logout.php">ออกจากระบบ</a>
     </div>
     <br>
+    <a href="newpost.php">สร้างกระทู้ใหม่</a>
     <ul>
         <?php
             for($i=1;$i<=10;$i++){
