@@ -15,7 +15,7 @@
         <option value="Normal">เรื่องทั่วไป</option>
         <option value="Learn">เรื่องเรียน</option>
     </select>
-    <a style="float: right ;" href="Login.html">เข้าสู่ระบบ</a>
+    <a style="float: right ;" href="Login.php">เข้าสู่ระบบ</a>
     <br>
     <ul>
         <?php
