@@ -23,6 +23,6 @@
         <tr><td colspan="2" align="center"><input type="submit" value="ส่งข้อความ"></td></tr>
     </table>
     <br>
-    <center><a href="FirstPage.php">กลับไปหน้าหลัก</a></center>
+    <center><a href="index.php">กลับไปหน้าหลัก</a></center>
 </body>
 </html>
