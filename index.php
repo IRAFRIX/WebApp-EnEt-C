@@ -48,6 +48,7 @@
         <?php
         echo "ผู้ใช้งานระบบ:".$_SESSION['username'];
         ?>
+        &nbsp;&nbsp;
         <a href="logout.php">ออกจากระบบ</a>
     </div>
     <br>
@@ -55,7 +56,12 @@
     <ul>
         <?php
             for($i=1;$i<=10;$i++){
-                echo "<li><a href=post.php?id="."$i".">กระทู้ที่ ".$i."</a></li>";
+                echo "<li>";
+                echo "<a href=post.php?id="."$i".">กระทู้ที่ ".$i."</a>";
+                if($_SESSION['role'] == "a"){
+                    echo "&nbsp;&nbsp;&nbsp;<a href=delete.php?id=$i>ลบ</a>";
+                }
+                echo "</li>";
             }
         ?>
     </ul>

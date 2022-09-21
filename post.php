@@ -9,7 +9,7 @@
 <body>
     <H1 style="text-align: center ;">WAKER WEBBROAD</H1>
     <hr>
-    <center>ต้องการดูกะทู้หมายเลข <?php echo $_GET['id']?></center>
+    <center>ต้องการดูกระทู้หมายเลข <?php echo $_GET['id']?></center>
     <?php
         $n = $_GET['id'];
         if (($n % 2) == 0)
