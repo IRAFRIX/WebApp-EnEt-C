@@ -18,17 +18,20 @@ else{
 <body>
 <H1 style="text-align: center ;">WAKER WEBBROAD</H1>
     <hr>
+    <table style="width:35% ">
     <?php
-    echo "ผู้ใช้งานระบบ:".$_SESSION['username'];
+    echo "ผู้ใช้ :&nbsp;".$_SESSION['username'];
     ?><br>
-    หมวดหมู่:
+    <tr><td>หมวดหมู่ :</td><td>
     <select name="thing">
         <option value="All">--ทั้งหมด--</option>
         <option value="Normal">เรื่องทั่วไป</option>
         <option value="Learn">เรื่องเรียน</option>
     </select><br>
-    หัวข้อ: <input type="text" size="25"><br>
-    เนื้อหา:<textarea cols = 25 rols=1></textarea><br>
+    <tr><td>หัวข้อ :</td><td><input type="text" size="25"></td></tr>
+    <tr><td>เนื้อหา :</td><td><textarea cols = 25 rols=1></textarea></td></tr>
+    <tr><td colspan="2" align="center"><input type="submit" value="บันทึกข้อความ"></td></tr>
+    </table>
     <center><a href="index.php">กลับไปหน้าหลัก</a></center>
 </body>
 <?php
