@@ -18,31 +18,41 @@
     if(!isset($_SESSION['id'])){
 ?>
 <body>
+    <div class="container">
     <H1 style="text-align: center ;">WAKER WEBBROAD</H1>
-    <hr>
-    หมวดหมู่:
-    <select name="thing">
-        <option value="All">--ทั้งหมด--</option>
-        <option value="Normal">เรื่องทั่วไป</option>
-        <option value="Learn">เรื่องเรียน</option>
-    </select>
-    <a style="float: right ;" href="Login.php">เข้าสู่ระบบ</a>
+    <?php include "nav.php"; ?><br>
+    <div class="d-flex">
+        <div>
+            <label>หมวดหมู่</label>
+            <span class="dropdown">
+                <button class="btn btn-light dropdown-toggle btn-sm"
+                type="button" id="button2" data-bs-toggle="dropdown"
+                aria-expanded="false">--ทั้งหมด--</button>
+                <ul class="dropdown-menu" aria-labelledby="button2">
+                    <li><a href="#" class="dropdown-item">ทั้งหมด</a></li>
+                    <li><a href="#" class="dropdown-item">เรื่องเรียน</a></li>
+                    <li><a href="#" class="dropdown-item">เรื่องทั่วไป</a></li>
+                </ul>
+            </span>
+        </div>
+    </div>
     <br>
     <a href="newpost.php">สร้างกระทู้ใหม่</a>
-    <ul>
+    <table class="table table-striped">
         <?php
             for($i=1;$i<=10;$i++){
-                echo "<li><a href=post.php?id="."$i".">กระทู้ที่ ".$i."</a></li>";
+                echo "<tr><td><a href=post.php?id=$i style=text-decoration:none>กระทู้ที่ ".$i."</a></td></tr>";
             }
         ?>
-    </ul>
+    </table>
 </body>
 <?php
     }else{
 ?>
 <body>
+    <div class="container">
     <H1 style="text-align: center ;">WAKER WEBBROAD</H1>
-    <hr>
+    <?php include "nav.php"; ?>
     หมวดหมู่:
     <select name="thing">
         <option value="All">--ทั้งหมด--</option>
@@ -70,6 +80,8 @@
             }
         ?>
     </ul>
+    </div>
+    </div>
 </body>
 <?php
     }
