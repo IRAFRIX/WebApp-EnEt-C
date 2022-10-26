@@ -20,7 +20,8 @@
 <body>
     <div class="container">
     <H1 style="text-align: center ;">WAKER WEBBROAD</H1>
-    <?php include "nav.php"; ?><br>
+    <?php include "nav.php"; ?>
+    <br>
     <div class="d-flex">
         <div>
             <label>หมวดหมู่</label>
@@ -37,7 +38,6 @@
         </div>
     </div>
     <br>
-    <a href="newpost.php">สร้างกระทู้ใหม่</a>
     <table class="table table-striped">
         <?php
             for($i=1;$i<=10;$i++){
@@ -53,6 +53,7 @@
     <div class="container">
     <H1 style="text-align: center ;">WAKER WEBBROAD</H1>
     <?php include "nav.php"; ?>
+    <br>
     <div class="d-flex justify-content-between">
         <div>
             <label>หมวดหมู่</label>

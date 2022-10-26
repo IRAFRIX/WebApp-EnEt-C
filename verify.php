@@ -6,7 +6,6 @@
     }
 ?>
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,20 +19,23 @@
         $Log = $_POST["n"];
         $Pass = $_POST["pa"];
         if($Log == "admin" && $Pass == "ad1234"){
-            echo "<center>ยินดีต้อนรับคุณ ADMIN</center>";
             $_SESSION['username']='admin';
             $_SESSION['role']='a';
             $_SESSION['id']= session_id();
+            header("location:index.php");
+            die();
         }
         elseif($Log == "member" && $Pass == "mem1234"){
-            echo "<center>ยินดีต้อนรับคุณ MEMBER</center>";
             $_SESSION['username']='member';
             $_SESSION['role']='m';
             $_SESSION['id']= session_id();
+            header("location:index.php");
+            die();
         }
         else{
-            echo "<center>ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง</center>";
+            $_SESSION['error']='error';
+            header("location:login.php");
+            die();
         }
     ?>
     <center><a href="index.php">กลับไปหน้าหลัก</a></center>
-</html>

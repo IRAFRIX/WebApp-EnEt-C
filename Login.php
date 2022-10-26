@@ -11,19 +11,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <title>Login</title>
 </head>
 <body>
+    <div class="container">
     <H1 style="text-align: center ;">WAKER WEBBROAD</H1>
-    <hr>
-    <form action="verify.php" method="post">
-        <table style="border:2px solid black ; width:40% " align="center">
-            <tr><td style="background-color: #6cd2fe;"colspan="2">เข้าสู่ระบบ</a></td></tr>
-            <tr><td>Login:</td><td><input type="text" name="n" size="50"></td></tr>
-            <tr><td>Password:</td><td><input type="password" name="pa" size="50"></td></tr>
-            <tr><td colspan="2" align="center"><input type="submit" value="Login"></td></tr>
-        </table><br>
-    </form>
+    <?php include "nav.php" ?>
+    <br>
+    <div class="row mb-2">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <?php
+                if(isset($_SESSION['error'])){
+                    echo"<div class='alert alert-danger'>ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง</div>";
+                    unset($_SESSION['error']);
+                }
+            ?>
+            <div class="card text-dark bg-light">
+                <div class="card-header">เข้าสู่ระบบ</div>
+                <div class="card-body">
+                    <form action="verify.php" method="post">
+                        <div class="form-group mb-2">
+                            <label class="form-label">login</label>
+                            <input type="text" name="n" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label class="form-label">password</label>
+                            <input type="password" name="pa" class="form-control">
+                        </div>
+                        <center><button type="submit" class="btn btn-secondary btn-sm">login</button></center>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
     <center>ถ้ายังไม่ได้เป็นสมาชิก <a href="register.php">กรุณาสมัครสมาชิก</a></center>
+    </div>
 </body>
 </html>
