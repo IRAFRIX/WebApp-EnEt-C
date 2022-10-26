@@ -75,7 +75,7 @@
                             <label class="col-md-3 col-form-label"></label>
                             <div class="col-mb-9">
                                 <button class="btn btn-primary btn-sm" type="submit">
-                                <i class="bi bi-save"></i> สมัครสมาชิก
+                                <i class="bi bi-save me-1"></i> สมัครสมาชิก
                                 </button>
                             </div>
                         </div>
