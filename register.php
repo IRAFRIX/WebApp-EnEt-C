@@ -33,13 +33,13 @@
                         <div class="row mb-2">
                             <label class="col-mb-3 col-form-label">ชื่อบัญชี</label>
                             <div class="col-md-9">
-                                <input type="text" name="n" class="form-control" require>
+                                <input type="text" name="login" class="form-control" require>
                             </div>
                         </div>
                         <div class="row mb-2">
                             <label class="col-mb-3 col-form-label">รหัสผ่าน</label>
                             <div class="col-md-9">
-                                <input type="password" name="pa" class="form-control" require>
+                                <input type="password" name="pwd" class="form-control" require>
                             </div>
                         </div>
                         <div class="row mb-2">
